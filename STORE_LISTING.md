@@ -100,7 +100,7 @@ This Actor extracts publicly visible hotel listing data only. It does not log in
 - [x] Apify Actor created
 - [x] Apify Actor source connected to GitHub repository
 - [x] GitHub-connected cloud build succeeded
-- [ ] Automatic builds from GitHub configured in Console
+- [x] Automatic builds from GitHub configured via push webhook
 - [x] Apify cloud build succeeded
 - [x] Apify test run succeeded
 - [x] Monetization configured on Apify

@@ -30,7 +30,7 @@
 - [x] Actor created in Apify
 - [x] Actor source connected to GitHub repository
 - [x] GitHub-connected cloud build succeeded
-- [ ] Automatic builds from GitHub enabled in Console
+- [x] Automatic builds from GitHub enabled via push webhook
 - [x] Cloud build succeeded
 - [x] Test run succeeded with Amsterdam
 - [x] Test run succeeded with London
@@ -53,6 +53,8 @@
 Monetization note: Apify accepted pay-per-event pricing on 2026-05-30 with a required future `startedAt` of 2026-06-14T17:21:05.933Z.
 
 Icon note: the original SVG plus PNG/JPEG fallbacks are in `.actor/`. Apify rejected raw GitHub, jsDelivr, and key-value-store image URLs for `pictureUrl`; Console upload uses a UI-token-only `/upload/actor-picture/{actorId}` endpoint.
+
+GitHub webhook note: GitHub webhook `633631274` triggers the Apify Build Actor endpoint on every push to the repository.
 
 ## Maintenance
 
