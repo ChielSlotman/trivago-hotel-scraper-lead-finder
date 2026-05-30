@@ -17,12 +17,14 @@
 - [x] Local smoke run passing
 - [x] Git repository initialized
 - [x] Initial commit created
+- [x] GitHub Actions CI added
 
 ## GitHub
 
 - [x] New GitHub repository created: `trivago-hotel-scraper-lead-finder`
 - [x] Local repository remote set to GitHub
 - [x] Initial commit pushed
+- [x] CI workflow passing on `main`
 - [x] Repository checked for secrets
 
 ## Apify
@@ -34,6 +36,8 @@
 - [x] Cloud build succeeded
 - [x] Test run succeeded with Amsterdam
 - [x] Test run succeeded with London
+- [x] Test run succeeded with Paris
+- [x] Test run succeeded with Barcelona
 - [x] Output dataset checked for clean spreadsheet-ready rows
 - [ ] Actor icon uploaded
 - [x] Store title set
@@ -55,6 +59,8 @@ Monetization note: Apify accepted pay-per-event pricing on 2026-05-30 with a req
 Icon note: the original SVG plus PNG/JPEG fallbacks are in `.actor/`. Apify rejected raw GitHub, jsDelivr, and key-value-store image URLs for `pictureUrl`; Console upload uses a UI-token-only `/upload/actor-picture/{actorId}` endpoint.
 
 GitHub webhook note: GitHub webhook `633631274` triggers the Apify Build Actor endpoint on every push to the repository.
+
+Latest verification note: GitHub Actions CI passed for commit `66f8e334390d99c41086737abeeba75b4ce58d73`. The webhook-triggered Apify build `jARLo5d1FLwg1FMnf` succeeded, and the Barcelona test run `b5XkzhMdSZq8FTvOE` returned 5 dataset rows from that build.
 
 ## Maintenance
 

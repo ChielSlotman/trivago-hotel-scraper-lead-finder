@@ -97,6 +97,7 @@ This Actor extracts publicly visible hotel listing data only. It does not log in
 - [x] Monetization plan
 - [x] Original non-branded icon asset
 - [x] GitHub repository pushed
+- [x] GitHub Actions CI passing
 - [x] Apify Actor created
 - [x] Apify Actor source connected to GitHub repository
 - [x] GitHub-connected cloud build succeeded
