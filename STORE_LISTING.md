@@ -66,6 +66,7 @@ Recommended Apify Store setup:
 - Displayed equivalent: `$5.00 per 1,000 hotel listing records`
 - Platform usage: include platform usage in event price after validating test-run compute costs
 - Major pricing changes: avoid frequent changes because Apify requires notice for major monetization changes
+- Current Apify configuration: pay-per-event pricing accepted on 2026-05-30 and scheduled to start on 2026-06-14 because Apify requires a future effective date for this pricing update.
 
 Rationale: The Actor creates one dataset item per hotel listing. Apify can automatically charge `apify-default-dataset-item` for every item written to the default dataset, so billing maps directly to the number of delivered hotel records.
 
@@ -96,12 +97,12 @@ This Actor extracts publicly visible hotel listing data only. It does not log in
 - [x] Monetization plan
 - [x] Original non-branded icon asset
 - [ ] GitHub repository pushed
-- [ ] Apify Actor created or connected to GitHub
+- [x] Apify Actor created
 - [ ] Automatic builds from GitHub configured
-- [ ] Apify cloud build succeeded
-- [ ] Apify test run succeeded
-- [ ] Monetization configured in Apify Console
-- [ ] Actor published on Apify Store
+- [x] Apify cloud build succeeded
+- [x] Apify test run succeeded
+- [x] Monetization configured on Apify
+- [x] Actor published on Apify Store
 
 ## Suggested first test runs
 

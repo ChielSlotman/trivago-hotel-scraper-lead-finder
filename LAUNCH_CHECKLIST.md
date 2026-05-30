@@ -20,32 +20,35 @@
 ## GitHub
 
 - [ ] New GitHub repository created: `trivago-hotel-scraper-lead-finder`
-- [ ] Local repository remote set to GitHub
+- [x] Local repository remote set to GitHub
 - [ ] Initial commit pushed
 - [x] Repository checked for secrets
 
 ## Apify
 
-- [ ] Actor created in Apify Console
+- [x] Actor created in Apify
 - [ ] Actor source connected to GitHub repository
 - [ ] Automatic builds from GitHub enabled
-- [ ] Cloud build succeeded
-- [ ] Test run succeeded with Amsterdam
-- [ ] Test run succeeded with London
-- [ ] Output dataset checked for clean spreadsheet-ready rows
+- [x] Cloud build succeeded
+- [x] Test run succeeded with Amsterdam
+- [x] Test run succeeded with London
+- [x] Output dataset checked for clean spreadsheet-ready rows
 - [ ] Actor icon uploaded
-- [ ] Store title set
-- [ ] Subtitle set
-- [ ] SEO title set
-- [ ] SEO description set
-- [ ] Categories set
+- [x] Store title set
+- [x] Short Store description set
+- [x] SEO title set
+- [x] SEO description set
+- [x] Categories set
 - [ ] Tags set
 - [ ] README rendered correctly
-- [ ] Source visibility preference reviewed
-- [ ] Monetization configured as pay per event
-- [ ] `apify-default-dataset-item` event enabled
-- [ ] Result price set to `$0.005` per dataset item
-- [ ] Store publication submitted
+- [x] Public Store page reachable
+- [x] Source visibility preference reviewed
+- [x] Monetization configured as pay per event
+- [x] `apify-default-dataset-item` event enabled
+- [x] Result price set to `$0.005` per dataset item
+- [x] Store publication live
+
+Monetization note: Apify accepted pay-per-event pricing on 2026-05-30 with a required future `startedAt` of 2026-06-14T17:21:05.933Z.
 
 ## Maintenance
 
