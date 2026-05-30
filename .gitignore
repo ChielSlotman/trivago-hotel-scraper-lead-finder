@@ -1,0 +1,8 @@
+node_modules/
+storage/
+apify_storage/
+.env
+.env.*
+*.log
+DEBUG_*.html
+RAW_*.json

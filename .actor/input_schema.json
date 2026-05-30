@@ -1,0 +1,205 @@
+{
+  "title": "Trivago Hotel Scraper and Lead Finder input",
+  "description": "Extract public Trivago hotel listing data by destination for hotel research, price comparison, market analysis, and lead-generation workflows.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "destination": {
+      "title": "Destination",
+      "type": "string",
+      "description": "City, region, country, landmark, or a public Trivago destination URL. Examples: Amsterdam, London, Paris, Barcelona.",
+      "editor": "textfield",
+      "prefill": "Amsterdam",
+      "example": "Amsterdam",
+      "minLength": 2
+    },
+    "checkIn": {
+      "title": "Check-in date",
+      "type": "string",
+      "description": "Optional check-in date in YYYY-MM-DD format. The Actor returns this value in each row for downstream workflows. Trivago public listing pages may still show forecasted public prices instead of exact stay-date prices.",
+      "editor": "datepicker",
+      "nullable": true,
+      "pattern": "^(\\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+      "example": "2026-07-01"
+    },
+    "checkOut": {
+      "title": "Check-out date",
+      "type": "string",
+      "description": "Optional check-out date in YYYY-MM-DD format. Must be after the check-in date when both are provided.",
+      "editor": "datepicker",
+      "nullable": true,
+      "pattern": "^(\\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+      "example": "2026-07-02"
+    },
+    "adults": {
+      "title": "Adults",
+      "type": "integer",
+      "description": "Number of adult guests to record with the run. Public Trivago SEO listing pages may not expose guest-specific live pricing.",
+      "editor": "number",
+      "default": 2,
+      "prefill": 2,
+      "minimum": 1,
+      "maximum": 20
+    },
+    "rooms": {
+      "title": "Rooms",
+      "type": "integer",
+      "description": "Number of rooms to record with the run. Public Trivago SEO listing pages may not expose room-specific live pricing.",
+      "editor": "number",
+      "default": 1,
+      "prefill": 1,
+      "minimum": 1,
+      "maximum": 10
+    },
+    "currency": {
+      "title": "Preferred currency",
+      "type": "string",
+      "description": "Optional preferred currency code such as USD, EUR, or GBP. Trivago decides which currency is visible on the public page; the output includes the actual visible currency when available.",
+      "editor": "select",
+      "nullable": true,
+      "enumSuggestedValues": [
+        "USD",
+        "EUR",
+        "GBP",
+        "CAD",
+        "AUD"
+      ],
+      "enumTitles": [
+        "USD",
+        "EUR",
+        "GBP",
+        "CAD",
+        "AUD"
+      ],
+      "example": "EUR"
+    },
+    "maxResults": {
+      "title": "Maximum hotel listings",
+      "type": "integer",
+      "description": "Maximum number of public hotel listing cards to return. Trivago destination pages commonly expose up to 35 public listing cards in the initial SEO page.",
+      "editor": "number",
+      "default": 100,
+      "prefill": 100,
+      "example": 100,
+      "minimum": 1,
+      "maximum": 500
+    },
+    "includePrices": {
+      "title": "Include prices",
+      "type": "boolean",
+      "description": "Include public visible price fields when Trivago exposes them on listing cards.",
+      "editor": "checkbox",
+      "default": true,
+      "prefill": true
+    },
+    "includeBookingProviders": {
+      "title": "Include booking provider data",
+      "type": "boolean",
+      "description": "Include public provider count and provider fields when visible. Trivago listing pages often expose provider counts, not individual provider names.",
+      "editor": "checkbox",
+      "default": true,
+      "prefill": true
+    },
+    "includeImages": {
+      "title": "Include images",
+      "type": "boolean",
+      "description": "Include public hotel image URLs when available.",
+      "editor": "checkbox",
+      "default": true,
+      "prefill": true
+    },
+    "includeRatings": {
+      "title": "Include ratings",
+      "type": "boolean",
+      "description": "Include public guest rating, review count, and star rating fields when available.",
+      "editor": "checkbox",
+      "default": true,
+      "prefill": true
+    },
+    "includeAmenities": {
+      "title": "Include amenities and highlights",
+      "type": "boolean",
+      "description": "Include public listing highlights and amenity-like text when visible on the listing card.",
+      "editor": "checkbox",
+      "default": true,
+      "prefill": true
+    },
+    "deduplicateResults": {
+      "title": "Deduplicate results",
+      "type": "boolean",
+      "description": "Remove duplicate hotels using Trivago accommodation IDs and URLs.",
+      "editor": "checkbox",
+      "default": true,
+      "prefill": true
+    },
+    "maxRetries": {
+      "title": "Maximum retries",
+      "type": "integer",
+      "description": "Number of retry attempts for destination resolution and public listing page requests.",
+      "editor": "number",
+      "default": 3,
+      "minimum": 0,
+      "maximum": 10,
+      "sectionCaption": "Advanced options",
+      "sectionDescription": "Tune network behavior only when the default settings do not fit your use case."
+    },
+    "requestTimeoutSecs": {
+      "title": "Request timeout",
+      "type": "integer",
+      "description": "Maximum seconds to wait for each public Trivago request.",
+      "editor": "number",
+      "default": 45,
+      "minimum": 10,
+      "maximum": 180
+    },
+    "languageCode": {
+      "title": "Language code",
+      "type": "string",
+      "description": "Trivago locale path used for public destination resolution.",
+      "editor": "select",
+      "default": "en-US",
+      "enumSuggestedValues": [
+        "en-US",
+        "en-GB",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "nl"
+      ],
+      "enumTitles": [
+        "English (US)",
+        "English (UK)",
+        "German",
+        "French",
+        "Spanish",
+        "Italian",
+        "Dutch"
+      ]
+    },
+    "proxyConfiguration": {
+      "title": "Proxy configuration",
+      "type": "object",
+      "description": "Proxy settings for public Trivago pages. Residential proxies are recommended for cloud runs if Trivago blocks datacenter traffic.",
+      "editor": "proxy",
+      "default": {
+        "useApifyProxy": true,
+        "apifyProxyGroups": [
+          "RESIDENTIAL"
+        ]
+      }
+    },
+    "debugMode": {
+      "title": "Debug mode",
+      "type": "boolean",
+      "description": "Save debug HTML and parsed state to the key-value store when no listings are found or a request is blocked.",
+      "editor": "checkbox",
+      "default": false
+    }
+  },
+  "required": [
+    "destination",
+    "maxResults"
+  ],
+  "additionalProperties": false
+}

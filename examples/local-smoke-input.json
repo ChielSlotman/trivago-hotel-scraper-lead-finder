@@ -1,0 +1,16 @@
+{
+  "destination": "Amsterdam",
+  "maxResults": 5,
+  "includePrices": true,
+  "includeBookingProviders": true,
+  "includeImages": true,
+  "includeRatings": true,
+  "includeAmenities": true,
+  "deduplicateResults": true,
+  "proxyConfiguration": {
+    "useApifyProxy": false
+  },
+  "maxRetries": 1,
+  "requestTimeoutSecs": 30,
+  "debugMode": true
+}

@@ -1,0 +1,348 @@
+{
+  "actorSpecification": 1,
+  "title": "Trivago hotel listings",
+  "description": "Public Trivago hotel listing records extracted for hotel research, market analysis, price comparison, and lead-generation workflows.",
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "hotelName",
+          "destination",
+          "city",
+          "country",
+          "price",
+          "currency",
+          "guestRating",
+          "reviewCount",
+          "starRating",
+          "providerCount",
+          "rankingPosition",
+          "trivagoUrl",
+          "imageUrl",
+          "scrapedAt"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "hotelName": {
+            "label": "Hotel",
+            "format": "text"
+          },
+          "destination": {
+            "label": "Destination",
+            "format": "text"
+          },
+          "city": {
+            "label": "City",
+            "format": "text"
+          },
+          "country": {
+            "label": "Country",
+            "format": "text"
+          },
+          "price": {
+            "label": "Price",
+            "format": "number"
+          },
+          "currency": {
+            "label": "Currency",
+            "format": "text"
+          },
+          "guestRating": {
+            "label": "Guest rating",
+            "format": "number"
+          },
+          "reviewCount": {
+            "label": "Reviews",
+            "format": "number"
+          },
+          "starRating": {
+            "label": "Stars",
+            "format": "number"
+          },
+          "providerCount": {
+            "label": "Providers",
+            "format": "number"
+          },
+          "rankingPosition": {
+            "label": "Rank",
+            "format": "number"
+          },
+          "trivagoUrl": {
+            "label": "Trivago URL",
+            "format": "link"
+          },
+          "imageUrl": {
+            "label": "Image",
+            "format": "image"
+          },
+          "scrapedAt": {
+            "label": "Scraped at",
+            "format": "date"
+          }
+        }
+      }
+    }
+  },
+  "fields": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+    "hotelName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Hotel name",
+      "description": "Hotel or accommodation name as shown publicly on Trivago.",
+      "example": "Hotel Not Hotel Amsterdam"
+    },
+    "hotelUrl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Hotel URL",
+      "description": "Public Trivago hotel detail URL when available.",
+      "example": "https://www.trivago.com/en-US/oar/hotel-not-hotel-amsterdam?search=100-3228222"
+    },
+    "trivagoUrl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Trivago URL",
+      "description": "Public Trivago URL for the hotel listing.",
+      "example": "https://www.trivago.com/en-US/oar/hotel-not-hotel-amsterdam?search=100-3228222"
+    },
+    "destination": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Destination",
+      "description": "User-requested destination.",
+      "example": "Amsterdam"
+    },
+    "city": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "City",
+      "description": "City parsed from public Trivago location context when available.",
+      "example": "Amsterdam"
+    },
+    "country": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Country",
+      "description": "Country parsed from public Trivago location context when available.",
+      "example": "Netherlands"
+    },
+    "address": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Address",
+      "description": "Public address when visible on the listing page.",
+      "example": null
+    },
+    "latitude": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "Latitude",
+      "description": "Hotel latitude when publicly visible.",
+      "example": null
+    },
+    "longitude": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "Longitude",
+      "description": "Hotel longitude when publicly visible.",
+      "example": null
+    },
+    "starRating": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "Star rating",
+      "description": "Hotel star rating when visible.",
+      "example": 4
+    },
+    "guestRating": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "Guest rating",
+      "description": "Public guest rating shown by Trivago.",
+      "example": 8.6
+    },
+    "reviewCount": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "title": "Review count",
+      "description": "Public review count shown by Trivago.",
+      "example": 1248
+    },
+    "price": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "Price",
+      "description": "Public price shown on the Trivago listing card when available.",
+      "example": 129
+    },
+    "currency": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Currency",
+      "description": "Currency visible on the public Trivago page.",
+      "example": "EUR"
+    },
+    "pricePerNight": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "Price per night",
+      "description": "Public listing-card price per night when available.",
+      "example": 129
+    },
+    "checkIn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Check-in",
+      "description": "Input check-in date recorded for downstream workflows.",
+      "example": "2026-07-01"
+    },
+    "checkOut": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Check-out",
+      "description": "Input check-out date recorded for downstream workflows.",
+      "example": "2026-07-02"
+    },
+    "bookingProvider": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Booking provider",
+      "description": "Primary booking provider if publicly visible on the listing card.",
+      "example": null
+    },
+    "providerUrl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Provider URL",
+      "description": "Provider URL if publicly visible on the listing card.",
+      "example": null
+    },
+    "allVisibleProviders": {
+      "type": "array",
+      "title": "All visible providers",
+      "description": "Provider names visible on the listing card when available.",
+      "example": [],
+      "items": {
+        "type": "string"
+      }
+    },
+    "providerCount": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "title": "Provider count",
+      "description": "Count of visible booking sites or advertisers when Trivago exposes the count.",
+      "example": 18
+    },
+    "imageUrl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Image URL",
+      "description": "Public hotel image URL when visible.",
+      "example": "https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_267,q_60,w_400/hotelier-images/example.jpeg"
+    },
+    "amenities": {
+      "type": "array",
+      "title": "Amenities",
+      "description": "Public amenity-like listing text when visible.",
+      "example": [
+        "24/7 Fitness Center Access"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "visibleHighlights": {
+      "type": "array",
+      "title": "Visible highlights",
+      "description": "Public listing highlights shown by Trivago.",
+      "example": [
+        "Exceptional breakfast with a view"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "hotelDescription": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Hotel description",
+      "description": "Short public description or listing highlights when available.",
+      "example": "Exceptional breakfast with a view; Panoramic city views from every room"
+    },
+    "rankingPosition": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "title": "Ranking position",
+      "description": "Position of the hotel in the public Trivago listing results.",
+      "example": 1
+    },
+    "sourceSearchUrl": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "Source search URL",
+      "description": "Public Trivago destination URL used as the source.",
+      "example": "https://www.trivago.com/en-US/odr/hotels-amsterdam-netherlands?search=200-27561"
+    },
+    "scrapedAt": {
+      "type": "string",
+      "title": "Scraped at",
+      "description": "ISO timestamp when the row was created.",
+      "example": "2026-05-30T00:00:00.000Z"
+    }
+    }
+  }
+}

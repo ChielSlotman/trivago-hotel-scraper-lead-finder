@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Hotel search and price comparison icon</title>
+  <desc id="desc">Original square icon with a hotel building, magnifying glass, and price tag.</desc>
+  <rect width="512" height="512" rx="96" fill="#0E6F8F"/>
+  <path d="M96 390h320v42H96z" fill="#F7C65F"/>
+  <path d="M145 145c0-18 15-33 33-33h126c18 0 33 15 33 33v245H145z" fill="#F7F9FB"/>
+  <path d="M181 170h35v35h-35zm71 0h35v35h-35zm-71 67h35v35h-35zm71 0h35v35h-35zm-71 67h35v35h-35zm71 0h35v86h-35z" fill="#0E6F8F"/>
+  <path d="M330 310c-46 0-84-38-84-84s38-84 84-84 84 38 84 84-38 84-84 84zm0-127c-24 0-43 19-43 43s19 43 43 43 43-19 43-43-19-43-43-43z" fill="#F7C65F"/>
+  <path d="M386 286l63 63c9 9 9 24 0 33s-24 9-33 0l-63-63z" fill="#F7C65F"/>
+  <path d="M339 180l45 45-45 45-45-45z" fill="#FFFFFF"/>
+  <path d="M326 220h30v12h-30z" fill="#0E6F8F"/>
+</svg>

@@ -1,0 +1,17 @@
+{
+  "destination": "Amsterdam",
+  "checkIn": "2026-07-01",
+  "checkOut": "2026-07-02",
+  "adults": 2,
+  "rooms": 1,
+  "currency": "EUR",
+  "maxResults": 100,
+  "includePrices": true,
+  "includeBookingProviders": true,
+  "includeImages": true,
+  "includeRatings": true,
+  "includeAmenities": true,
+  "deduplicateResults": true,
+  "maxRetries": 3,
+  "debugMode": false
+}

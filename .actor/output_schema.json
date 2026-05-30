@@ -1,0 +1,12 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Trivago hotel listing results",
+  "properties": {
+    "hotels": {
+      "type": "string",
+      "title": "Hotels",
+      "description": "Clean public Trivago hotel listing records for hotel research, price comparison, and lead-generation workflows.",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    }
+  }
+}
