@@ -72,7 +72,7 @@ Rationale: The Actor creates one dataset item per hotel listing. Apify can autom
 
 ## Icon
 
-Use `.actor/actor_icon.svg` as the listing icon. It is an original hotel/search/price-comparison icon with no Trivago logo, no Trivago text, no watermark, and no protected brand elements.
+Use `.actor/actor_icon.svg` as the source listing icon. PNG and JPEG fallbacks are also available at `.actor/actor_icon.png` and `.actor/actor_icon_256.jpg`. The icon is an original hotel/search/price-comparison icon with no Trivago logo, no Trivago text, no watermark, and no protected brand elements.
 
 ## Responsible use note
 
@@ -96,9 +96,11 @@ This Actor extracts publicly visible hotel listing data only. It does not log in
 - [x] Responsible use note
 - [x] Monetization plan
 - [x] Original non-branded icon asset
-- [ ] GitHub repository pushed
+- [x] GitHub repository pushed
 - [x] Apify Actor created
-- [ ] Automatic builds from GitHub configured
+- [x] Apify Actor source connected to GitHub repository
+- [x] GitHub-connected cloud build succeeded
+- [ ] Automatic builds from GitHub configured in Console
 - [x] Apify cloud build succeeded
 - [x] Apify test run succeeded
 - [x] Monetization configured on Apify

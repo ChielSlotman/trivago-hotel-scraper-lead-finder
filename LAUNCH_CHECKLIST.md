@@ -11,6 +11,7 @@
 - [x] Store listing copy added
 - [x] Example input and output added
 - [x] Original icon asset added
+- [x] PNG and JPEG icon fallbacks added
 - [x] Dependencies installed
 - [x] Unit tests passing
 - [x] Local smoke run passing
@@ -19,16 +20,17 @@
 
 ## GitHub
 
-- [ ] New GitHub repository created: `trivago-hotel-scraper-lead-finder`
+- [x] New GitHub repository created: `trivago-hotel-scraper-lead-finder`
 - [x] Local repository remote set to GitHub
-- [ ] Initial commit pushed
+- [x] Initial commit pushed
 - [x] Repository checked for secrets
 
 ## Apify
 
 - [x] Actor created in Apify
-- [ ] Actor source connected to GitHub repository
-- [ ] Automatic builds from GitHub enabled
+- [x] Actor source connected to GitHub repository
+- [x] GitHub-connected cloud build succeeded
+- [ ] Automatic builds from GitHub enabled in Console
 - [x] Cloud build succeeded
 - [x] Test run succeeded with Amsterdam
 - [x] Test run succeeded with London
@@ -49,6 +51,8 @@
 - [x] Store publication live
 
 Monetization note: Apify accepted pay-per-event pricing on 2026-05-30 with a required future `startedAt` of 2026-06-14T17:21:05.933Z.
+
+Icon note: the original SVG plus PNG/JPEG fallbacks are in `.actor/`. Apify rejected raw GitHub, jsDelivr, and key-value-store image URLs for `pictureUrl`; Console upload uses a UI-token-only `/upload/actor-picture/{actorId}` endpoint.
 
 ## Maintenance
 
